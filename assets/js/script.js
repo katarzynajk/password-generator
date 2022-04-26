@@ -1,31 +1,58 @@
-// general plan
-// prompt1: enter a password length between 8 - 128
-// prompt2: 'Would you like to include lowercase?'
-// prompt3: 'Would you like to include uppercase?'
-// prompt4: 'Would you like to include numbers?'
-// prompt5: 'Would you like to include special characters?'
-
 // Assignment Code
 const generateBtn = document.querySelector("#generate");
 
 // main function to generate a password
 const getPasswordLength = () => {
-    // prompt1: enter a password length between 8 - 128 and store it as a variable
-    // ?? if the password length is not a number or it is less than 8 or above than 128 characters, return an alert?
+  // prompt1: enter a password length between 8 - 128 and store it as a variable
+  // ?? if the password length is not a number or it is less than 8 or above than 128 characters, return an alert?
+  const userInput = prompt(
+    "Please enter a password length between 8 - 128 characters"
+  );
+
+  const passwordLength = parseInt(userInput);
+
+  if (!isNaN(passwordLength) && passwordLength >= 8 && passwordLength <= 128) {
+    return passwordLength;
+  } else {
+    alert("Please enter a valid number");
+    window.location.reload(true);
+    document.getElementById("password").reset();
+  }
 };
 
 // a password criteria
 const getPasswordCriteria = () => {
-    // generate criteria
-    // if no criteria is selected initialize loop counter (new criteria)? - retry
+  // generate criteria
+  const lowercase = confirm("Would you like to include lowercase?");
+  const uppercase = confirm("Would you like to include uppercase?");
+  const numbers = confirm("Would you like to include numbers?");
+  const specialCharacter = confirm(
+    "Would you like to include special characters?"
+  );
+  // if no criteria is selected initialize loop counter (new criteria)? - retry
 
-    // prompt2: 'Would you like to include lowercase?'
-    // prompt3: 'Would you like to include uppercase?'
-    // prompt4: 'Would you like to include numbers?'
-    // prompt5: 'Would you like to include special characters?'};
+  // prompt2: 'Would you like to include lowercase?'
+  // prompt3: 'Would you like to include uppercase?'
+  // prompt4: 'Would you like to include numbers?'
+  // prompt5: 'Would you like to include special characters?'
+  const getPasswordCriteria = [];
+  if (lowercase) {
+    getCriteria.push("abcdefghijklmnopqrstuvwxyz");
+  }
+  if (uppercase) {
+    getCriteria.push("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+  }
+  if (numbers) {
+    getCriteria.push("0123456789");
+  }
+  if (special) {
+    getCriteria.push("%&'()*+,-./:;<=>?@[]^_`");
+  }
+  return getCriteria;
+};
 
-    // validate each one prompt & make user to confirm the criteria
-    // if any choice selected push into array
+// validate each one prompt & make user to confirm the criteria
+// if any choice selected push into array
 
 const createRandomPassword = () => {
   // select random characters from the array
