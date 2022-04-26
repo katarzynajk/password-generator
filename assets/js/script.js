@@ -35,7 +35,7 @@ const getPasswordCriteria = () => {
   // prompt3: 'Would you like to include uppercase?'
   // prompt4: 'Would you like to include numbers?'
   // prompt5: 'Would you like to include special characters?'
-  const getPasswordCriteria = [];
+  const getCriteria = [];
   if (lowercase) {
     getCriteria.push("abcdefghijklmnopqrstuvwxyz");
   }
@@ -45,7 +45,7 @@ const getPasswordCriteria = () => {
   if (numbers) {
     getCriteria.push("0123456789");
   }
-  if (special) {
+  if (specialCharacter) {
     getCriteria.push("%&'()*+,-./:;<=>?@[]^_`");
   }
   return getCriteria;
@@ -54,7 +54,22 @@ const getPasswordCriteria = () => {
 // validate each one prompt & make user to confirm the criteria
 // if any choice selected push into array
 
-const createRandomPassword = () => {
+const createRandomPassword = (passwordLength, getCriteria) => {
+  const passwordArray = [];
+  // for loops until reaching password length
+  for (let i = 0; i < passwordLength; i += 1) {
+    const randomCategoryIndex = Math.floor(Math.random() * getCriteria.length);
+    // get random symbol
+    const randomCategory = getCriteria[randomCategoryIndex];
+    // get random index
+    const randomIndex = Math.floor(Math.random() * randomCategory.length);
+    // get random character
+    const randomCharacter = randomCategory.charAt(randomIndex);
+    // push to result array
+    passwordArray.push(randomCharacter);
+  }
+  // convert result array to string
+  return passwordArray.join("");
   // select random characters from the array
   // get random symbol
   // get random index
