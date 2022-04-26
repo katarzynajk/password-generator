@@ -4,6 +4,12 @@ This is a random password generator. After selecting a password length we are pr
 
 ## Link to URL
 
+Password Generator page:
+https://katarzynajk.github.io/password-generator/
+
+GitHub repository:
+https://github.com/katarzynajk/password-generator
+
 ## Screenshots
 
 ![pct1](./assets/images/pct1.jpg)
