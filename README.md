@@ -4,4 +4,8 @@ This is a random password generator. After selecting a password length we are pr
 
 ## Link to URL
 
-## Screenshot
+## Screenshots
+
+![pct1](./assets/images/pct1.jpg)
+![pct2](./assets/images/pct2.jpg)
+![pct3](./assets/images/pct3.jpg)
