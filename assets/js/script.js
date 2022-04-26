@@ -1,21 +1,37 @@
+// general plan
+// prompt1: enter a password length between 8 - 128
+// prompt2: 'Would you like to include lowercase?'
+// prompt3: 'Would you like to include uppercase?'
+// prompt4: 'Would you like to include numbers?'
+// prompt5: 'Would you like to include special characters?'
+
 // Assignment Code
 const generateBtn = document.querySelector("#generate");
 
+// main function to generate a password
 const getPasswordLength = () => {
-  return 10;
+    // prompt1: enter a password length between 8 - 128 and store it as a variable
+    // ?? if the password length is not a number or it is less than 8 or above than 128 characters, return an alert?
 };
 
+// a password criteria
 const getPasswordCriteria = () => {
-  return [
-    "abcdefghijklmnopqrstuvwxyz",
-    "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-    "0123456789",
-    " !\"#$%&'()*+,-./:;<=>?@[]^_`{|}~",
-  ];
-};
+    // generate criteria
+    // if no criteria is selected initialize loop counter (new criteria)? - retry
+
+    // prompt2: 'Would you like to include lowercase?'
+    // prompt3: 'Would you like to include uppercase?'
+    // prompt4: 'Would you like to include numbers?'
+    // prompt5: 'Would you like to include special characters?'};
+
+    // validate each one prompt & make user to confirm the criteria
+    // if any choice selected push into array
 
 const createRandomPassword = () => {
-  return "kdUE28(@d0";
+  // select random characters from the array
+  // get random symbol
+  // get random index
+  // get random character
 };
 
 // main function to generate the random password
